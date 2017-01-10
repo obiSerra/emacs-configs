@@ -1,0 +1,17 @@
+.smex-items
+*~$
+places
+.recentf
+ido.last
+cider-history
+projectile-bookmarks.eld
+projectile.cache
+auto-save-list
+backups
+ac-comphist.dat
+network-security.data
+elpa/
+eshell/
+themes/
+tramp
+\#*
