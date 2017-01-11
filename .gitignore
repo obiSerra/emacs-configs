@@ -15,3 +15,5 @@ eshell/
 themes/
 tramp
 \#*
+
+customization/private.el
