@@ -16,4 +16,4 @@ themes/
 tramp
 \#*
 
-customization/private.el
+customizations/private.el

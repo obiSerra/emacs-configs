@@ -41,7 +41,7 @@
 ;; http://www.gnu.org/software/emacs/manual/html_node/elisp/Backup-Files.html
 (setq backup-directory-alist `(("." . ,(concat user-emacs-directory
                                                "backups"))))
-(setq auto-save-default nil)
+(setq auto-save-default t)
 
 
 ;; comments
@@ -75,3 +75,6 @@
 (global-auto-complete-mode t)
 
 
+(global-set-key "\C-cy" '(lambda ()
+                           (interactive)
+                           (popup-menu 'yank-menu)))

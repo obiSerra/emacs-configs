@@ -72,7 +72,9 @@
     ;; git integration
     magit
 
-    auto-complete))
+    auto-complete
+    
+    web-mode))
 
 ;; On OS X, an Emacs instance started from the graphical user
 ;; interface will have a different environment than a shell in a
@@ -140,9 +142,13 @@
 ;; Langauage-specific
 (load "setup-clojure.el")
 (load "setup-js.el")
+(load "setup-web.el")
 
 ;; Org mode config
 (load "setup-org.el")
+
+;; Private data and password
+;(load "private.el")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -155,7 +161,7 @@
     ("9e54a6ac0051987b4296e9276eecc5dfb67fdcd620191ee553f40a9b6d943e78" default)))
  '(package-selected-packages
    (quote
-    (php+-mode zenburn tagedit smex rainbow-delimiters projectile paredit newlisp-mode monokai-theme material-theme markdown-mode magit jenkins ido-ubiquitous highlight-symbol groovy-mode exec-path-from-shell cyberpunk-theme color-theme-monokai clojure-mode-extra-font-locking cider ac-emmet))))
+    (request web-mode org-gcal php+-mode zenburn tagedit smex rainbow-delimiters projectile paredit newlisp-mode monokai-theme material-theme markdown-mode magit jenkins ido-ubiquitous highlight-symbol groovy-mode exec-path-from-shell cyberpunk-theme color-theme-monokai clojure-mode-extra-font-locking cider ac-emmet))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
