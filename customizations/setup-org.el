@@ -6,8 +6,13 @@
 ; TODO closed note on timestamp 
 (setq org-log-done 'note)
 
-
+; TODO states
+  (setq org-todo-keywords
+       '((sequence "TODO" "IN-PROGRESS" "|" "DONE" )))
 ;; active Babel languages
+
+(setq org-babel-clojure-backend 'cider)
+(require 'cider)
 
 (require 'ob-python)
 (require 'ob-clojure)
