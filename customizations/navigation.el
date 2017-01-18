@@ -46,6 +46,11 @@
 ;; for selecting buffer and file names
 (ido-ubiquitous-mode 1)
 
+(require 'ido-vertical-mode)
+(ido-mode 1)
+(ido-vertical-mode 1)
+(setq ido-vertical-define-keys 'C-n-and-C-p-only)
+
 ;; Shows a list of buffers
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
