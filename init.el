@@ -54,6 +54,7 @@
     ;; customizations/navigation.el line 23 for a description
     ;; of ido
     ido-ubiquitous
+    ido-vertical-mode
 
     ;; Enhances M-x to allow easier execution of commands. Provides
     ;; a filterable list of possible commands in the minibuffer
@@ -74,7 +75,9 @@
 
     auto-complete
     
-    web-mode))
+    web-mode
+
+    ))
 
 ;; On OS X, an Emacs instance started from the graphical user
 ;; interface will have a different environment than a shell in a
@@ -161,7 +164,7 @@
     ("9e54a6ac0051987b4296e9276eecc5dfb67fdcd620191ee553f40a9b6d943e78" default)))
  '(package-selected-packages
    (quote
-    (request web-mode org-gcal php+-mode zenburn tagedit smex rainbow-delimiters projectile paredit newlisp-mode monokai-theme material-theme markdown-mode magit jenkins ido-ubiquitous highlight-symbol groovy-mode exec-path-from-shell cyberpunk-theme color-theme-monokai clojure-mode-extra-font-locking cider ac-emmet))))
+    (groovy-mode ox-twbs plantuml-mode request web-mode org-gcal php+-mode zenburn tagedit smex rainbow-delimiters projectile paredit newlisp-mode monokai-theme material-theme markdown-mode magit jenkins ido-ubiquitous highlight-symbol exec-path-from-shell cyberpunk-theme color-theme-monokai clojure-mode-extra-font-locking cider ac-emmet))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
