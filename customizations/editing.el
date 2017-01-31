@@ -13,7 +13,17 @@
         try-complete-lisp-symbol))
 
 ;; Highlights matching parenthesis
+(require 'paren)
+
 (show-paren-mode 1)
+
+(setq show-paren-style 'parenthesis) ; highlight brackets
+;; (setq show-paren-style 'expression) ; highlight expression
+;; (setq show-paren-style 'mixed) ; highlight brackets if visible, else entire expression
+
+(set-face-foreground 'show-paren-match "coral")
+(set-face-background 'show-paren-match "DeepSkyBlue4")
+(set-face-attribute 'show-paren-match nil :weight 'extra-bold)
 
 ;; Highlight current line
 (global-hl-line-mode 1)
