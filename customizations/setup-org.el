@@ -31,3 +31,14 @@
 ; Calendar syncronization
 
 
+; some basic commands
+(define-key global-map "\C-cl" 'org-store-link)
+(define-key global-map "\C-ca" 'org-agenda)
+(setq org-log-done t)
+
+
+
+; Agenda
+
+(setq org-agenda-files (list "~/Dropbox/notes/work.org"
+                             "~/Dropbox/notes/nerd.org"))
