@@ -14,3 +14,7 @@
 ;; Interactions between emacs kill-ring and mac osx clipboard
 (setq interprogram-cut-function 'paste-to-osx)
 (setq interprogram-paste-function 'copy-from-osx)
+
+;; Git gutter abled
+
+(global-git-gutter-mode +1)
