@@ -8,7 +8,7 @@
 
 ; TODO states
   (setq org-todo-keywords
-       '((sequence "TODO" "IN-PROGRESS" "|" "DONE" )))
+       '((sequence "TODO" "IN-PROGRESS" "STOP" "STUCK" "|" "DONE" )))
 ;; active Babel languages
 
 (setq org-babel-clojure-backend 'cider)
