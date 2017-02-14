@@ -73,10 +73,13 @@
     ;; git integration
     magit
 
+    git-gutter
+
     auto-complete
     
     web-mode
 
+    emmet-mode
     ))
 
 ;; On OS X, an Emacs instance started from the graphical user
