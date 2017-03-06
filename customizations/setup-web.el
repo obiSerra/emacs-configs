@@ -10,3 +10,8 @@
 
 (require 'emmet-mode)
 (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . emmet-mode))
+
+;;; PHP-mode installed manually because package-install didn't work
+
+(eval-after-load 'php-mode
+  '(require 'php-ext))
