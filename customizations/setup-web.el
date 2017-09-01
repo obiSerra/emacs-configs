@@ -4,6 +4,7 @@
 
 (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.blade\\.php\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.[agj]sp\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
@@ -16,7 +17,7 @@
 
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 ;; (add-to-list 'auto-mode-alist '("\\.jsx?\\'" . js2-jsx-mode))
-(add-to-list 'auto-mode-alist '("components\\/.*\\.js\\'" . rjsx-mode))
+(add-to-list 'auto-mode-alist '("\\.js\\'" . rjsx-mode))
 
 (add-to-list 'interpreter-mode-alist '("node" . js2-jsx-mode))
 
@@ -32,11 +33,6 @@
 ;; (add-hook 'web-mode-hook 'js-auto-beautify-mode)
 (require 'emmet-mode)
 (add-hook 'web-mode-hook 'emmet-mode)
-
-
-;; (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . emmet-mode))
-;; (add-to-list 'auto-mode-alist '("\\.html\\'" . emmet-mode))
-;; (add-to-list 'auto-mode-alist '("\\.tpl\\.html\\'" . emmet-mode))
 
 ;;; PHP-mode installed manually because package-install didn't work
 
