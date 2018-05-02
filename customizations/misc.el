@@ -10,3 +10,7 @@
 
 ;; Go straight to scratch buffer on startup
 (setq inhibit-startup-message t)
+
+;; Markdown compiler 
+(custom-set-variables
+ '(markdown-command "/usr/local/bin/pandoc"))

@@ -3,7 +3,7 @@
 ; TODO closed timestamp
 (setq org-log-done 'time)
 
-; TODO closed note on timestamp 
+; TODO closed note on timestamp
 (setq org-log-done 'note)
 
 ; TODO states
@@ -41,5 +41,17 @@
 
 ; Agenda
 
-(setq org-agenda-files (list "~/Dropbox/notes/work.org"
-                             "~/Dropbox/notes/nerd.org"))
+
+
+(define-key global-map "\C-cc" 'org-capture)
+
+
+(setq org-capture-templates
+ '(("t" "Todo" entry (file+headline "~/Dropbox/org-docs/etiqa-tracker.org" "Tasks")
+    "\n** TODO %?
+   :PROPERTIES:
+   :TYPE: %^{prompt|Other|Bug|CR|Feature|Card}
+   :TRACKER: %^{prompt|Other|UHC738-EPO-POS}
+   :VERSION: %^{prompt|Other|v19.1.0|v20.0.4|v20.0.5|v20.0.6}
+   :END:")
+   ))
