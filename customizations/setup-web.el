@@ -1,4 +1,5 @@
 (require 'web-mode)
+(require 'column-marker)
 ;; (require 'js-auto-beautify)
 
 

@@ -108,7 +108,7 @@
 ;; Adding this code will make Emacs enter yaml mode whenever you open
 ;; a .yml file
 (add-to-list 'load-path "~/.emacs.d/vendor")
-
+(add-to-list 'load-path "~/.emacs.d/local-plugins/")
 
 ;;;;
 ;; Customization
@@ -173,10 +173,10 @@
       ("FOOO" "~/Dropbox/org-docs/etiqa-tracker.org" "Tracking")
       "* TODO %?
   %?
-  %a"))))
+  %a"))) t)
  '(package-selected-packages
    (quote
-    (sass-mode org-brain geeknote markdown-preview-mode ipython column-marker rjsx-mode json-mode handlebars-mode dockerfile-mode js-auto-beautify js2-mode feature-mode less-css-mode kibit-helper gherkin-mode fiplr yaml-mode arduino-mode flymake-jslint ## racket-mode ssh apache-mode php-mode atom-dark-theme spacemacs-theme darkokai-theme groovy-mode ox-twbs plantuml-mode request web-mode org-gcal php+-mode zenburn tagedit smex rainbow-delimiters projectile paredit newlisp-mode monokai-theme material-theme markdown-mode magit jenkins ido-ubiquitous highlight-symbol exec-path-from-shell cyberpunk-theme clojure-mode-extra-font-locking cider ac-emmet))))
+    (scheme-complete scribble-mode geiser quack curl-for-url less sass-mode org-brain geeknote markdown-preview-mode ipython column-marker rjsx-mode json-mode handlebars-mode dockerfile-mode js-auto-beautify js2-mode feature-mode less-css-mode kibit-helper gherkin-mode fiplr yaml-mode arduino-mode flymake-jslint ## racket-mode ssh apache-mode php-mode atom-dark-theme spacemacs-theme darkokai-theme groovy-mode ox-twbs plantuml-mode request web-mode org-gcal php+-mode zenburn tagedit smex rainbow-delimiters projectile paredit newlisp-mode monokai-theme material-theme markdown-mode magit jenkins ido-ubiquitous highlight-symbol exec-path-from-shell cyberpunk-theme clojure-mode-extra-font-locking cider ac-emmet))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
