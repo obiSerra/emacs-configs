@@ -3,5 +3,4 @@
 # key: roj
 # --
 
-
-{ name: "$1", path: "/$3", component: $1 }$0
+{ name: "$1", path: ${1:$((lambda (s) (let ((case-fold-search nil)) (while (string-match "[A-Z]" s 1) (setq s (replace-match (concat "-" (downcase (match-string 0 s))) t nil s))) (downcase s))) yas-text)}, component: $1 }$0
