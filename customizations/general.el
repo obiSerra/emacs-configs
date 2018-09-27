@@ -18,3 +18,5 @@
 ;; Git gutter abled
 
 (global-git-gutter-mode +1)
+
+(yas-global-mode 1)

@@ -42,6 +42,7 @@
 (require 'emmet-mode)
 (add-hook 'web-mode-hook 'emmet-mode)
 (add-hook 'js2-mode-hook 'emmet-mode)
+(add-hook 'vue-mode-hook 'emmet-mode)
 
 ;;; PHP-mode installed manually because package-install didn't work
 
@@ -71,6 +72,7 @@
 (require 'prettier-js)
 (add-hook 'js2-mode-hook 'prettier-js-mode)
 (add-hook 'web-mode-hook 'prettier-js-mode)
+(add-hook 'vue-mode-hook 'prettier-js-mode)
 
 (add-hook 'web-mode-hook #'(lambda ()
                             (enable-minor-mode

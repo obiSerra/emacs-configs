@@ -1,0 +1,12 @@
+# contributor: Roberto Serra <obi.serra@gmail.com>
+# name: Stateless Component
+# key: stateless-component
+# --
+import React from "react"
+
+const $1 = () => (
+      <div>
+      </div>
+)
+
+export default $1

@@ -1,0 +1,5 @@
+# contributor: Roberto Serra <obi.serra@gmail.com>
+# name: Import component
+# key: im
+# --
+import $1 from "./$1"
