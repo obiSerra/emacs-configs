@@ -127,6 +127,7 @@
 ;; Generic setup and minor modes enabled
 ;;
 (load "general.el")
+(load "linting.el")
 
 ;; These customizations make it easier for you to navigate files,
 ;; switch buffers, and choose options from the minibuffer.
