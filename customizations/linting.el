@@ -1,17 +1,22 @@
-;; http://www.flycheck.org/manual/latest/index.html
+;;; linting.el -- Linting for various languages
+
+;;; Commentary:
+
+;; Flycheck configuration for JavaScript using eslint
+
+;;; Code:
+
 (require 'flycheck)
 
 ;; turn on flychecking globally
 (add-hook 'after-init-hook #'global-flycheck-mode)
-
-;; (add-hook 'rjsx-mode-hook 'flycheck-mode)
 
 ;; disable jshint since we prefer eslint checking
 (setq-default flycheck-disabled-checkers
   (append flycheck-disabled-checkers
     '(javascript-jshint)))
 
-;; use eslint with web-mode for jsx files
+;; use eslint for js and web
 (flycheck-add-mode 'javascript-eslint 'rjsx-mode)
 (flycheck-add-mode 'javascript-eslint 'web-mode)
 
@@ -24,9 +29,11 @@
     '(json-jsonlist)))
 
 
-;; use local eslint from node_modules before global
-;; http://emacs.stackexchange.com/questions/21205/flycheck-with-file-relative-eslint-executable
+
 (defun my/use-eslint-from-node-modules ()
+  "Use local eslint from node_modules before global.
+Ref: http://emacs.stackexchange.com/questions/21205/flycheck-with-file-relative-eslint-executable"
+
   (let* ((root (locate-dominating-file
                 (or (buffer-file-name) default-directory)
                 "node_modules"))
@@ -37,3 +44,6 @@
       (setq-local flycheck-javascript-eslint-executable eslint))))
 
 (add-hook 'flycheck-mode-hook #'my/use-eslint-from-node-modules)
+
+(provide 'linting)
+;;; linting.el ends here
