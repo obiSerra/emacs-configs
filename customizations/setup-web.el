@@ -1,5 +1,11 @@
+;;; package --- Summary
+;;; Commentary:
+;;; setup-web --- configuration
+
+;;; Code:
+
 (require 'web-mode)
-(require 'column-marker)
+;; (require 'column-marker)
 
 
 (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
@@ -16,11 +22,10 @@
 
 (setq web-mode-enable-current-element-highlight t)
 
-(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+;; (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-jsx-mode))
 ;; (add-to-list 'auto-mode-alist '("\\.jsx?\\'" . js2-jsx-mode))
 (add-to-list 'auto-mode-alist '("\\.js\\'" . rjsx-mode))
-
-(add-to-list 'interpreter-mode-alist '("node" . js2-jsx-mode))
+(add-to-list 'interpreter-mode-alist '("node" . rjsx-mode))
 
 ;; (add-hook 'js2-mode-hook (lambda ()
   ;; (web-mode-set-content-type "jsx")))
@@ -43,6 +48,7 @@
 (add-hook 'web-mode-hook 'emmet-mode)
 (add-hook 'js2-mode-hook 'emmet-mode)
 (add-hook 'vue-mode-hook 'emmet-mode)
+(add-hook 'rjsx-mode-hook 'emmet-mode)
 
 ;;; PHP-mode installed manually because package-install didn't work
 
@@ -73,6 +79,8 @@
 (add-hook 'js2-mode-hook 'prettier-js-mode)
 (add-hook 'web-mode-hook 'prettier-js-mode)
 (add-hook 'vue-mode-hook 'prettier-js-mode)
+(add-hook 'rjsx-mode 'prettier-js-mode)
+
 
 (add-hook 'web-mode-hook #'(lambda ()
                             (enable-minor-mode
@@ -98,4 +106,47 @@
 ;; (setq indent-line-function 'insert-tab)
 
 
-(add-hook 'js2-mode-hook (lambda () (interactive) (column-marker-1 120)))
+;; (add-hook 'js2-mode-hook 'flow-minor-mode)
+;; (add-hook 'rjsx-mode-hook 'flow-minor-mode)
+
+(add-hook 'js2-jsx-mode-hook (lambda () (interactive) (column-marker-1 120)))
+
+;; http://www.flycheck.org/manual/latest/index.html
+(require 'flycheck)
+
+;; turn on flychecking globally
+(add-hook 'after-init-hook #'global-flycheck-mode)
+
+;; (add-hook 'rjsx-mode-hook 'flycheck-mode)
+
+;; disable jshint since we prefer eslint checking
+(setq-default flycheck-disabled-checkers
+  (append flycheck-disabled-checkers
+    '(javascript-jshint)))
+
+;; use eslint with web-mode for jsx files
+(flycheck-add-mode 'javascript-eslint 'rjsx-mode)
+(flycheck-add-mode 'javascript-eslint 'web-mode)
+
+;; customize flycheck temp file prefix
+(setq-default flycheck-temp-prefix ".flycheck")
+
+;; disable json-jsonlist checking for json files
+(setq-default flycheck-disabled-checkers
+  (append flycheck-disabled-checkers
+    '(json-jsonlist)))
+
+
+;; use local eslint from node_modules before global
+;; http://emacs.stackexchange.com/questions/21205/flycheck-with-file-relative-eslint-executable
+(defun my/use-eslint-from-node-modules ()
+  (let* ((root (locate-dominating-file
+                (or (buffer-file-name) default-directory)
+                "node_modules"))
+         (eslint (and root
+                      (expand-file-name "node_modules/eslint/bin/eslint.js"
+                                        root))))
+    (when (and eslint (file-executable-p eslint))
+      (setq-local flycheck-javascript-eslint-executable eslint))))
+
+(add-hook 'flycheck-mode-hook #'my/use-eslint-from-node-modules)

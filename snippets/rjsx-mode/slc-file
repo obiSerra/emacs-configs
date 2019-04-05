@@ -1,10 +1,13 @@
 # contributor: Roberto Serra <obi.serra@gmail.com>
-# name: Stateless Component
-# key: slc
+# name: Stateless Component File
+# key: slc-file
 # --
+import React from "react"
 
 const $1 = () => (
       <div>
       $0
       </div>
 )
+
+export default $1

@@ -1,0 +1,10 @@
+# contributor: Roberto Serra <obi.serra@gmail.com>
+# name: Class component constructor
+# key: const
+# --
+
+constructor(props) {
+super(props)
+this.state = {}
+$0
+}

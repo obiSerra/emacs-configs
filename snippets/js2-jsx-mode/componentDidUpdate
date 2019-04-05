@@ -1,0 +1,8 @@
+# contributor: Roberto Serra <obi.serra@gmail.com>
+# name: Component Did Update
+# key: did-update
+# --
+
+componentDidUpdate(prevProps, prevState, snapshot) {
+                              $0
+}

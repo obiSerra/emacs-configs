@@ -12,6 +12,6 @@
     (downcase s)))
 
 
-(defun camelCase->words (s &optional sep start) 
+(defun camelCase->words (s &optional sep start)
   (interactive)
   (replace-regexp-in-string (or sep "-") " " (un-camelcase-string s (or sep "-") (or start 1))))

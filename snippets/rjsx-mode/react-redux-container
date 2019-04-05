@@ -1,0 +1,22 @@
+# contributor: Roberto Serra <obi.serra@gmail.com>
+# name: React-redux Container
+# key: rdx-container
+# --
+
+import React, { Component } from "react"
+import { connect } from "react-redux"
+
+class $1 extends Component {
+      render(){
+        return ($2)
+      }
+}
+
+const mapStateToProps = store => ({})
+
+const mapDispatchToProps = dispatch => ({})
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)($1)
