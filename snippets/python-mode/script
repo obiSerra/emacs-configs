@@ -1,0 +1,13 @@
+# name: Script file
+# contributor: Roberto Serra <obi.serra@gmail.com>
+# key: script
+# --
+#!/usr/bin/env python3
+
+import optparse
+
+def main():
+    pass
+
+if __name__ == '__main__':
+    main()

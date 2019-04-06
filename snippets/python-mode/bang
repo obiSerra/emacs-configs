@@ -1,0 +1,5 @@
+# name: Shebang
+# contributor: Roberto Serra <obi.serra@gmail.com>
+# key: #!
+# --
+#!/usr/bin/env python3

@@ -18,7 +18,6 @@
 
 ;; use eslint for js and web
 (flycheck-add-mode 'javascript-eslint 'rjsx-mode)
-(flycheck-add-mode 'javascript-eslint 'web-mode)
 
 ;; customize flycheck temp file prefix
 (setq-default flycheck-temp-prefix ".flycheck")

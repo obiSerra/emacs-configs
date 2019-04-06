@@ -1,0 +1,6 @@
+# name: background-color
+# contributor: Roberto Serra <obi.serra@gmail.com>
+# key: bg-col
+# --
+
+background-color: #${1:DDD};

@@ -1,0 +1,14 @@
+# name: Optparse
+# contributor: Roberto Serra <obi.serra@gmail.com>
+# key: opt-parse
+# --
+
+parser = optparse.OptionParser('usage%prog -${1:f} <${2:hosts list}>')
+parser.add_option('-f', dest='${3:vname}', type='string', help='...')
+(options, args) = parser.parse_args()
+
+vname = options.$3
+
+if $3 == None:
+   print(parser.usage)
+   exit(0)

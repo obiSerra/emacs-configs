@@ -1,0 +1,11 @@
+# name: Snippet Header
+# contributor: Roberto Serra <obi.serra@gmail.com>
+# key: header
+# --
+
+# name: $1
+# contributor: ${2:`user-full-name` <`user-mail-address`>}
+# key: $3
+# --
+
+$0

@@ -1,0 +1,6 @@
+# name: background-image
+# contributor: Roberto Serra <obi.serra@gmail.com>
+# key: bg-img
+# --
+
+background-image: url($1);
