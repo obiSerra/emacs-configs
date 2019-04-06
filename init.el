@@ -119,14 +119,15 @@
 ;; Add a directory to our load path so that when you `load` things
 ;; below, Emacs knows where to look for the corresponding file.
 (add-to-list 'load-path "~/.emacs.d/customizations/")
-(load "column-marker.el")
 ;; Sets up exec-path-from-shell so that Emacs will use the correct
 ;; environment variables
 (load "shell-integration.el")
 
 ;; Generic setup and minor modes enabled
 ;;
-(load "general.el")
+(require 'column-marker)
+(require 'user-config)
+(load "global.el")
 (load "linting.el")
 
 ;; These customizations make it easier for you to navigate files,
