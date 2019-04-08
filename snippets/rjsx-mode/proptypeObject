@@ -1,0 +1,6 @@
+# name: PropType.object
+# contributor: Roberto Serra <obi.serra@gmail.com>
+# key: ptype-object
+# --
+
+$1: PropTypes.objectOf(PropTypes.function()).isRequired

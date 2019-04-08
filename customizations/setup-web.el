@@ -68,11 +68,9 @@
 (setq js-switch-indent-offset 2)
 
 (require 'prettier-js)
-
 (add-hook 'web-mode-hook 'prettier-js-mode)
 (add-hook 'vue-mode-hook 'prettier-js-mode)
 (add-hook 'rjsx-mode-hook 'prettier-js-mode)
-
 
 ;; (add-hook 'js2-mode-hook 'flow-minor-mode)
 ;; (add-hook 'rjsx-mode-hook 'flow-minor-mode)
@@ -80,6 +78,16 @@
 (require 'column-marker)
 
 (add-hook 'rjsx-mode-hook (lambda () (interactive) (column-marker-1 120)))
+
+
+(add-to-list 'load-path "~/tools/tern/emacs/")
+(autoload 'tern-mode "tern.el" nil t)
+(add-hook 'rjsx-mode-hook 'tern-mode)
+
+(eval-after-load 'tern
+  '(progn
+     (require 'tern-auto-complete)
+     (tern-ac-setup)))
 
 (provide 'setup-web)
 

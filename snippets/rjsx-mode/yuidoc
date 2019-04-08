@@ -1,0 +1,13 @@
+# name: YuiDocs
+# contributor: Roberto Serra <obi.serra@gmail.com>
+# key: yuidoc
+# --
+
+/**
+ * $1
+ *
+ * @module $2
+ * @class $3
+ * @element $4
+ * @method $5
+ */

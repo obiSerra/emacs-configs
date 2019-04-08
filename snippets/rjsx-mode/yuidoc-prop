@@ -1,0 +1,12 @@
+# name: YuiDocs React Proptype
+# contributor: Roberto Serra <obi.serra@gmail.com>
+# key: yuidoc-ptype
+# --
+
+/**
+* $0
+*
+* @property $2
+* @type $3
+* @required
+*/

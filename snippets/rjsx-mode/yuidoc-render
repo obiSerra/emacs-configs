@@ -1,0 +1,10 @@
+# name: YuiDocs React Render
+# contributor: Roberto Serra <obi.serra@gmail.com>
+# key: yuidoc-rrender
+# --
+
+/**
+ * ${1:Render the component}
+ *
+ * @method render
+ */

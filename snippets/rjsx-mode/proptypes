@@ -1,0 +1,10 @@
+# name: PropTypes
+# contributor: Roberto Serra <obi.serra@gmail.com>
+# key: ptypes
+# --
+
+import PropTypes from "prop-types";
+
+$1.propTypes = {
+  $2: PropTypes.${3:string}.isRequired
+}
