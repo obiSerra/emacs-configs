@@ -84,7 +84,8 @@
 (autoload 'tern-mode "tern.el" nil t)
 (add-hook 'rjsx-mode-hook 'tern-mode)
 
-(ac-config-default)
+
+(add-hook 'rjsx-mode-hook 'auto-complete-mode)
 
 (eval-after-load 'tern
   '(progn

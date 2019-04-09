@@ -129,6 +129,7 @@
 (require 'user-config)
 (load "global.el")
 (load "linting.el")
+(load "functions.el")
 
 ;; These customizations make it easier for you to navigate files,
 ;; switch buffers, and choose options from the minibuffer.

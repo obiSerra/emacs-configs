@@ -1,6 +1,0 @@
-# name: PropType.func
-# contributor: Roberto Serra <obi.serra@gmail.com>
-# key: ptype-func
-# --
-
-$1: PropTypes.func.isRequired

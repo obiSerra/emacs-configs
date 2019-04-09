@@ -1,10 +1,6 @@
-# name: PropTypes
+# name: Import PropTypes
 # contributor: Roberto Serra <obi.serra@gmail.com>
-# key: ptypes
+# key: i-ptypes
 # --
 
 import PropTypes from "prop-types";
-
-$1.propTypes = {
-  $2: PropTypes.${3:string}.isRequired
-}

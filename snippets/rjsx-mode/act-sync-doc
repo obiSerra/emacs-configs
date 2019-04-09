@@ -1,8 +1,13 @@
-# name: Sync action creator
+# name: Sync action creator with yuidoc
 # contributor: Roberto Serra <obi.serra@gmail.com>
-# key: act-sync
+# key: act-sync-doc
 # --
 
+/**
+ * $0
+ *
+ * @method $1
+ */
 export const $1 = ${2:$$(yas-auto-next (yas-choose-value '("payload" "()")))} => ({
        type: ${3:$$(upcase (camelCase->snake-case (or (yas-field-value 1) "") "_"))},
        ${2:$(when (equal (yas-field-value 2) "payload") "payload")}

@@ -1,0 +1,13 @@
+# name: PropType declaration
+# contributor: Roberto Serra <obi.serra@gmail.com>
+# key: ptype
+# --
+
+/**
+* $0
+*
+* @property $1
+* @type $2
+* @required
+*/
+$1: PropTypes.${2:$$(yas-auto-next (yas-choose-value '("string" "func" "bool" "object" "any")))}${3:.isRequired}

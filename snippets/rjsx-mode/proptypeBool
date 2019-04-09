@@ -1,6 +1,0 @@
-# name: PropType.bool
-# contributor: Roberto Serra <obi.serra@gmail.com>
-# key: ptype-bool
-# --
-
-$1: PropTypes.bool.isRequired
