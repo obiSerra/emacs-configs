@@ -4,10 +4,7 @@
 # --
 
 /**
- * $1
+ * $0
  *
- * @module $2
- * @class $3
- * @element $4
- * @method $5
+ * ${1:$$(yas-auto-next (yas-choose-value '("@method" "@class" "@element" "@module")))} $2
  */

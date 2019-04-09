@@ -1,0 +1,6 @@
+# name: Bind Method
+# contributor: Roberto Serra <obi.serra@gmail.com>
+# key: bmth
+# --
+
+this.$1 = this.$1.bind(this)

@@ -1,0 +1,6 @@
+# name: Action object
+# contributor: Roberto Serra <obi.serra@gmail.com>
+# key: act-obj
+# --
+
+export const $1 = "$1"

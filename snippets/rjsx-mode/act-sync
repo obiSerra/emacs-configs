@@ -1,0 +1,9 @@
+# name: Sync action creator
+# contributor: Roberto Serra <obi.serra@gmail.com>
+# key: act-sync
+# --
+
+export const $1 = ${2:$$(yas-auto-next (yas-choose-value '("payload" "()")))} => ({
+       type: $4,
+       ${2:$(when (equal (yas-field-value 2) "payload") "payload")}
+})
