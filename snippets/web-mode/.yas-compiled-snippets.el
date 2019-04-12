@@ -13,4 +13,4 @@
                        ("html-doc" "<!DOCTYPE html>\n<html>\n  <head>\n    <title>${1:Page Title}</title>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <meta name=\"keywords\" content=\"${2:...}\">\n    <meta name=\"description\" content=\"${3:...}\">\n  </head>\n  <body>\n   $0\n  </body>\n</html>\n" "Html document" nil nil nil "/Users/rserra/.emacs.d/snippets/web-mode/html-doc" nil nil)))
 
 
-;;; Do not edit! File generated at Tue Apr  9 16:41:22 2019
+;;; Do not edit! File generated at Thu Apr 11 13:10:10 2019

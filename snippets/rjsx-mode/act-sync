@@ -1,6 +1,7 @@
 # name: Sync action creator
 # contributor: Roberto Serra <obi.serra@gmail.com>
 # key: act-sync
+# group: react.redux
 # --
 
 export const $1 = ${2:$$(yas-auto-next (yas-choose-value '("payload" "()")))} => ({

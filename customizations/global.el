@@ -27,7 +27,17 @@
 ;; commentary
 
 ;;; Code:
+
+(require 'hideshow)
+(require 'hide-comnt)
+
 (add-hook 'prog-mode-hook #'hs-minor-mode)
+(setq hs-hide-comments-when-hiding-all t)
+(setq hs-hide-initial-comment-block t)
+(defun fold-on-load ()
+  (message ))
+
+(fold-on-load)
 
 (defun copy-from-osx ()
   "Mac osx Emacs interaction."

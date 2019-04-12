@@ -1,6 +1,7 @@
 # contributor: Roberto Serra <obi.serra@gmail.com>
 # name: Stateless Component File
 # key: slc-file
+# group: react
 # --
 import React from "react"
 

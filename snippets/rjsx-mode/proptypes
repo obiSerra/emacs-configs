@@ -1,6 +1,7 @@
 # name: Import PropTypes
 # contributor: Roberto Serra <obi.serra@gmail.com>
 # key: i-ptypes
+# group: react
 # --
 
 import PropTypes from "prop-types";

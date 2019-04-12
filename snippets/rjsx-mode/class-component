@@ -1,9 +1,8 @@
 # contributor: Roberto Serra <obi.serra@gmail.com>
 # name: Class Component
 # key: class-component
+# group: react
 # --
-
-import React, { Component } from "react"
 
 class $1 extends Component {
       render(){

@@ -1,0 +1,15 @@
+# name: class-method
+# contributor: Roberto Serra <obi.serra@gmail.com>
+# key: mth
+# group: docs
+# --
+
+/**
+ * ${2:...}
+ *
+ * @method $1
+ */
+
+$1() {
+     $0
+     }

@@ -1,6 +1,7 @@
 # contributor: Roberto Serra <obi.serra@gmail.com>
 # name: React Native Component
 # key: rn-component
+# group: react-native
 # --
 
 import React from "react"

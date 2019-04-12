@@ -1,6 +1,7 @@
-# name: Action object
+# name: Action Name
 # contributor: Roberto Serra <obi.serra@gmail.com>
-# key: act-obj
+# key: act-name
+# group: react.redux
 # --
 
 export const $1 = "$1"

@@ -6,6 +6,7 @@
 # name: $1
 # contributor: ${2:`user-full-name` <`user-mail-address`>}
 # key: $3
+# group: $4
 # --
 
 $0

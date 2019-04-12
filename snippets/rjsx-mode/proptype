@@ -1,6 +1,8 @@
 # name: PropType declaration
 # contributor: Roberto Serra <obi.serra@gmail.com>
 # key: ptype
+# group: react
+# group: docs
 # --
 
 /**

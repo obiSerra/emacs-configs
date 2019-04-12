@@ -1,6 +1,7 @@
 # contributor: Roberto Serra <obi.serra@gmail.com>
 # name: Component Lifecycle
 # key: life
+# group: react
 # --
 
 componentDidMount() {}

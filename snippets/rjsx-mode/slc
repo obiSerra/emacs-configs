@@ -1,6 +1,7 @@
 # contributor: Roberto Serra <obi.serra@gmail.com>
 # name: Stateless Component
 # key: slc
+# group: react
 # --
 
 const $1 = () => (

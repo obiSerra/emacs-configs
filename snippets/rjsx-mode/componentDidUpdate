@@ -1,6 +1,7 @@
 # contributor: Roberto Serra <obi.serra@gmail.com>
 # name: Component Did Update
 # key: did-update
+# group: react
 # --
 
 componentDidUpdate(prevProps, prevState, snapshot) {

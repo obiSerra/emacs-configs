@@ -1,6 +1,7 @@
 # contributor: Roberto Serra <obi.serra@gmail.com>
 # name: React-redux Container
 # key: rdx-container
+# group: react.redux
 # --
 
 import React, { Component } from "react"

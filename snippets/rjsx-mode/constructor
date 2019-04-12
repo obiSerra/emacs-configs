@@ -1,6 +1,7 @@
 # contributor: Roberto Serra <obi.serra@gmail.com>
 # name: Class component constructor
 # key: const
+# group: react
 # --
 
 constructor(props) {

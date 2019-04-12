@@ -1,6 +1,7 @@
 # contributor: Roberto Serra <obi.serra@gmail.com>
 # name: Unit test describe
 # key: udesc
+# group: unit-test
 # --
 
 describe("$1", () => {

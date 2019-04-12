@@ -6,4 +6,4 @@
                        ("bg-col" "background-color: #${1:DDD};" "background-color" nil nil nil "/Users/rserra/.emacs.d/snippets/css-mode/bg-col" nil nil)))
 
 
-;;; Do not edit! File generated at Tue Apr  9 16:41:22 2019
+;;; Do not edit! File generated at Thu Apr 11 13:10:10 2019

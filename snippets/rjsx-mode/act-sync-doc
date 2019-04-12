@@ -1,6 +1,8 @@
 # name: Sync action creator with yuidoc
 # contributor: Roberto Serra <obi.serra@gmail.com>
 # key: act-sync-doc
+# group: react.redux
+# group: docs
 # --
 
 /**

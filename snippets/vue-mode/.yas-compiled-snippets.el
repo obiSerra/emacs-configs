@@ -5,4 +5,4 @@
                      '(("component" "<template>\n</template>\n\n<script>\n</script>\n\n<style>\n</style>" "Vue Component" nil nil nil "/Users/rserra/.emacs.d/snippets/vue-mode/component" nil nil)))
 
 
-;;; Do not edit! File generated at Tue Apr  9 16:41:22 2019
+;;; Do not edit! File generated at Thu Apr 11 13:10:10 2019
