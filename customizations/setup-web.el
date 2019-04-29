@@ -93,6 +93,13 @@
      (tern-ac-setup)))
 
 
+(require 'hideshow)
+
+(defun fold-on-load ()
+  (hs-hide-all))
+
+(add-hook 'rjsx-mode-hook (lambda () (fold-on-load)))
+
 (provide 'setup-web)
 
 ;;; setup-web.el ends here
