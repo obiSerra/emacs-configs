@@ -93,3 +93,6 @@
       "(do (require 'figwheel-sidecar.repl-api)
            (figwheel-sidecar.repl-api/start-figwheel!)
            (figwheel-sidecar.repl-api/cljs-repl))")
+
+(require 'hideshow)
+(add-hook 'clojure-mode-hook (lambda () (hs-hide-all)))
