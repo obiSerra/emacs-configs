@@ -94,9 +94,7 @@
 
 
 (require 'hideshow)
-(require 'functions)
-
-(add-hook 'rjsx-mode-hook (lambda () (fold-on-load)))
+(add-hook 'rjsx-mode-hook (lambda () (hs-hide-all)))
 
 (provide 'setup-web)
 
