@@ -87,7 +87,8 @@
     hide-comnt
     flycheck
     spacemacs-theme
-    prettier-js))
+    prettier-js
+    dashboard))
 
 ;; On OS X, an Emacs instance started from the graphical user
 ;; interface will have a different environment than a shell in a
@@ -168,7 +169,7 @@
 
 ;; Org mode config
 (load "setup-org.el")
-
+(load "setup-dashboard.el")
 ;; Private data and password
 (load "private.el" t)
 
