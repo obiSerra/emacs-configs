@@ -43,8 +43,6 @@
     ;; key bindings and code colorization for Clojure
     ;; https://github.com/clojure-emacs/clojure-mode
     clojure-mode
-
-
 ;    js2-mode
     ;; extra syntax highlighting for clojure
     clojure-mode-extra-font-locking
@@ -78,7 +76,10 @@
     ;; various
     auto-complete
     arduino-mode
-    yasnippet))
+    yasnippet
+    flycheck
+    spacemacs-theme
+    prettier-js))
 
 ;; On OS X, an Emacs instance started from the graphical user
 ;; interface will have a different environment than a shell in a
@@ -174,6 +175,9 @@
  '(ede-project-directories (quote ("/Users/robertoserra/Dropbox/arduino-sketches")))
  '(markdown-command "/usr/local/bin/pandoc")
  '(markdown-preview-http-port 9001)
+ '(org-agenda-files
+   (quote
+    ("/mnt/c/Users/robertoserra/Desktop/etiqa-tracker.org" "/mnt/c/Users/robertoserra/Desktop/SYN-TASK.org" "/mnt/c/Users/robertoserra/Desktop/TOGO-TODO.org")))
  '(org-capture-templates
    (quote
     (("t" "Todo" entry

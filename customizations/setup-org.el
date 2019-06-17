@@ -7,8 +7,8 @@
 (setq org-log-done 'note)
 
 ; TODO states
-  (setq org-todo-keywords
-       '((sequence "TODO" "IN-PROGRESS" "PAUSED" "BLOCKED" "|" "DONE" "REJECTED" "MOVED-TO" )))
+(setq org-todo-keywords
+      '((sequence "TODO" "PAUSED" "BLOCKED" "IN-PROGRESS" "|" "DONE" "REJECTED" "MOVED-TO" )))
 
 ;; active Babel languages
 
@@ -25,8 +25,7 @@
  '((python . t)
    (clojure . t)
    (js . t)
-   (emacs-lisp . t)
-   ))
+   (emacs-lisp . t)))
 
 
 ; Calendar syncronization
