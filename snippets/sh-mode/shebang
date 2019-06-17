@@ -1,0 +1,7 @@
+# name: Shebang
+# contributor: Roberto Serra <obi.serra@gmail.com>
+# key: #!              
+# group: 
+# --
+
+#!/usr/bin/env bash

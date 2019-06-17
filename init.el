@@ -6,11 +6,14 @@
 (require 'package)
 (package-initialize)
 (add-to-list 'package-archives
+             '("melpa" . "http://melpa.org/packages/") t)
+(add-to-list 'package-archives
+             '("gnu" . "http://elpa.gnu.org/packages/") t)
+(add-to-list 'package-archives
              '("marmalade" . "http://marmalade-repo.org/packages/") t)
 (add-to-list 'package-archives
              '("tromey" . "http://tromey.com/elpa/") t)
-(add-to-list 'package-archives
-             '("melpa" . "http://melpa.org/packages/") t)
+
 
 ;; (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
 ;;                          ("marmalade" . "http://marmalade-repo.org/packages/")
@@ -75,11 +78,19 @@
     groovy-mode
     ;; various
     auto-complete
-    arduino-mode
+    ;; Snippets
     yasnippet
+    ;; lsp-mode
+    ;; lsp-ui
+    ;; company-lsp
+    dash
+    hide-comnt
     flycheck
     spacemacs-theme
-    prettier-js))
+    prettier-js
+    dashboard
+    rjsx-mode
+    ))
 
 ;; On OS X, an Emacs instance started from the graphical user
 ;; interface will have a different environment than a shell in a
@@ -124,6 +135,7 @@
 ;; environment variables
 (load "shell-integration.el")
 
+
 ;; Generic setup and minor modes enabled
 ;;
 (require 'column-marker)
@@ -131,7 +143,7 @@
 (load "global.el")
 (load "linting.el")
 (load "functions.el")
-
+;;(load "lsp-setup.el")
 ;; These customizations make it easier for you to navigate files,
 ;; switch buffers, and choose options from the minibuffer.
 (load "navigation.el")
@@ -159,9 +171,9 @@
 
 ;; Org mode config
 (load "setup-org.el")
-
+(load "setup-dashboard.el")
 ;; Private data and password
-(load "private.el")
+(load "private.el" t)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -187,7 +199,7 @@
   %a"))) t)
  '(package-selected-packages
    (quote
-    (ruby-mode hide-comnt flycheck flow-minor-mode markdown-preview-mode websocket spiral yasnippet vue-mode vue-html-mode markdown-mode+ prettier-js scheme-complete scribble-mode geiser quack curl-for-url less sass-mode org-brain geeknote ipython column-marker rjsx-mode json-mode handlebars-mode dockerfile-mode js-auto-beautify js2-mode feature-mode less-css-mode kibit-helper gherkin-mode fiplr yaml-mode arduino-mode flymake-jslint ## racket-mode ssh apache-mode php-mode atom-dark-theme spacemacs-theme darkokai-theme groovy-mode ox-twbs plantuml-mode request web-mode org-gcal php+-mode zenburn tagedit smex rainbow-delimiters projectile paredit newlisp-mode monokai-theme material-theme markdown-mode magit jenkins ido-ubiquitous highlight-symbol exec-path-from-shell cyberpunk-theme clojure-mode-extra-font-locking cider ac-emmet))))
+    (dash ruby-mode flycheck flow-minor-mode markdown-preview-mode websocket spiral yasnippet vue-mode vue-html-mode markdown-mode+ prettier-js scheme-complete scribble-mode geiser quack curl-for-url less sass-mode org-brain geeknote ipython column-marker json-mode handlebars-mode dockerfile-mode js-auto-beautify js2-mode feature-mode less-css-mode kibit-helper gherkin-mode fiplr yaml-mode arduino-mode flymake-jslint ## racket-mode ssh apache-mode php-mode atom-dark-theme spacemacs-theme darkokai-theme groovy-mode ox-twbs plantuml-mode request web-mode org-gcal php+-mode zenburn tagedit smex rainbow-delimiters projectile paredit newlisp-mode monokai-theme material-theme markdown-mode magit jenkins ido-ubiquitous highlight-symbol exec-path-from-shell cyberpunk-theme clojure-mode-extra-font-locking cider ac-emmet))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

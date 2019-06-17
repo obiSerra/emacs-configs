@@ -1,0 +1,7 @@
+# name: console.log
+# contributor: Roberto Serra <obi.serra@gmail.com>
+# key: console.log
+# group: 
+# --
+
+(.log js/console $0)

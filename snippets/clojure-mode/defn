@@ -1,0 +1,9 @@
+# name: defn
+# contributor: Roberto Serra <obi.serra@gmail.com>
+# key: defn    
+# group: generic
+# --
+
+
+(defn $1 [$2]
+ $0)
