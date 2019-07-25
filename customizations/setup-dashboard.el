@@ -19,13 +19,14 @@
 (setq dashboard-banner-logo-title "Welcome back OH GREAT OBI!")
 (setq dashboard-startup-banner 'logo)
 
+;;(setq initial-buffer-choice (lambda () (get-buffer "*dashboard*")))
+
 ;; Widgets
-(setq dashboard-items '((agenda . 5)
+(setq dashboard-items '((agenda . 10)
                         (recents  . 5)
                         (projects . 5)
                         (bookmarks . 5)
                         (registers . 5)))
-
 
 (provide 'setup-dashboard)
 

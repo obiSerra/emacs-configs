@@ -39,3 +39,6 @@
          "\n}\n}"))
   (delete-region (region-beginning) (region-end))
   (insert class-content))
+
+
+(load "cypress-functions.el")

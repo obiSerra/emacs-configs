@@ -1,4 +1,4 @@
-;;; setup-racket.el --- Configuration for racket -*- lexical-binding: t -*-
+;;; local-config.el --- Configuration specific for a single computer (path...) -*- lexical-binding: t -*-
 
 ;; Author: Roberto Serra
 ;; Maintainer: Roberto Serra
@@ -29,20 +29,9 @@
 
 ;;; Code:
 
-(add-hook 'racket-mode-hook #'enable-paredit-mode)
 
-;;(setq racket-racket-program "/usr/local/bin/racket")
-(require 'local-config)
+(setq racket-racket-program "/usr/bin/racket")
 
+(provide 'local-config)
 
-(ac-config-default)
-
-(add-to-list 'auto-mode-alist '("\\.rkt\\'" . racket-mode))
-
-(add-hook 'racket-mode-hook
-          (lambda ()
-            (define-key racket-mode-map (kbd "C-c r") 'racket-run)))
-
-(provide 'setup-racket)
-
-;;; setup-racket.el ends here
+;;; local-config.el ends here
