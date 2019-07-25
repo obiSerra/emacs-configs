@@ -35,6 +35,7 @@
 (add-to-list 'auto-mode-alist '("\\.hbs\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.cshtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.tpl\\.html\\'" . web-mode))
 
 (setq web-mode-enable-current-element-highlight t)
@@ -103,7 +104,7 @@
 
 
 (require 'hideshow)
-(add-hook 'rjsx-mode-hook (lambda () (hs-hide-all)))
+;;(add-hook 'rjsx-mode-hook (lambda () (hs-hide-all)))
 
 (provide 'setup-web)
 
