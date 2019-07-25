@@ -89,18 +89,20 @@
 
 (add-hook 'rjsx-mode-hook (lambda () (interactive) (column-marker-1 120)))
 
-
-(add-to-list 'load-path "~/tools/tern/emacs/")
-(autoload 'tern-mode "tern.el" nil t)
-(add-hook 'rjsx-mode-hook 'tern-mode)
-
-
 (add-hook 'rjsx-mode-hook 'auto-complete-mode)
 
-(eval-after-load 'tern
-  '(progn
-     (require 'tern-auto-complete)
-     (tern-ac-setup)))
+(when (file-exists-p "~/tools/tern/emacs/")
+
+  (add-to-list 'load-path "~/tools/tern/emacs/")
+  (autoload 'tern-mode "tern.el" nil t)
+  (add-hook 'rjsx-mode-hook 'tern-mode)
+
+  (eval-after-load 'tern
+    '(progn
+       (require 'tern-auto-complete)
+       (tern-ac-setup))))
+
+
 
 
 (require 'hideshow)
