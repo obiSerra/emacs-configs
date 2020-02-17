@@ -36,14 +36,10 @@
 (define-key global-map "\C-ca" 'org-agenda)
 (setq org-log-done t)
 
-
-
 ; Agenda
 
 
-
 (define-key global-map "\C-cc" 'org-capture)
-
 
 (setq org-capture-templates
  '(("t" "Todo" entry (file+headline "~/Dropbox/org-docs/etiqa-tracker.org" "Tasks")
@@ -52,5 +48,70 @@
    :TYPE: %^{prompt|Other|Bug|CR|Feature|Card}
    :TRACKER: %^{prompt|Other|UHC738-EPO-POS}
    :VERSION: %^{prompt|Other|v19.1.0|v20.0.4|v20.0.5|v20.0.6}
-   :END:")
-   ))
+   :END:")))
+
+; Others
+
+(require 'helm-org-rifle)
+(require 'org-sticky-header)
+(add-hook 'org-mode-hook 'org-sticky-header-mode)
+
+(add-hook 'org-mode-hook 'visual-line-mode)
+
+;; Display emphasis 
+(setq org-hide-emphasis-markers t)
+;; Better list bullets
+(setq org-hide-emphasis-markers t)
+(require 'org-bullets)
+(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+;; Better headers
+
+(let* ((variable-tuple (cond ((x-list-fonts "Source Sans Pro") '(:font "Source Sans Pro"))
+                             ((x-list-fonts "Lucida Grande")   '(:font "Lucida Grande"))
+                             ((x-list-fonts "Verdana")         '(:font "Verdana"))
+                             ((x-family-fonts "Sans Serif")    '(:family "Sans Serif"))
+                             (nil (warn "Cannot find a Sans Serif Font.  Install Source Sans Pro."))))
+       (base-font-color     (face-foreground 'default nil 'default))
+       (headline           `(:inherit default :weight bold :foreground ,base-font-color)))
+
+  (custom-theme-set-faces 'user
+                          `(org-level-8 ((t (,@headline ,@variable-tuple))))
+                          `(org-level-7 ((t (,@headline ,@variable-tuple))))
+                          `(org-level-6 ((t (,@headline ,@variable-tuple))))
+                          `(org-level-5 ((t (,@headline ,@variable-tuple))))
+                          `(org-level-4 ((t (,@headline ,@variable-tuple :height 1.1))))
+                          `(org-level-3 ((t (,@headline ,@variable-tuple :height 1.25))))
+                          `(org-level-2 ((t (,@headline ,@variable-tuple :height 1.5))))
+                          `(org-level-1 ((t (,@headline ,@variable-tuple :height 1.75))))
+                          `(org-document-title ((t (,@headline ,@variable-tuple :height 1.5 :underline nil))))))
+
+
+
+;; Wrap lines
+
+(add-hook 'org-mode-hook 'visual-line-mode)
+
+;; Pitch
+
+(custom-theme-set-faces
+ 'user
+ '(variable-pitch ((t (:family "Source Sans Pro" :height 180 :weight light))))
+ '(fixed-pitch ((t ( :family "Inconsolata" :slant normal :weight normal :height 1.0 :width normal)))))
+
+(add-hook 'org-mode-hook 'variable-pitch-mode)
+
+;; Fonts
+(custom-theme-set-faces
+ 'user
+ '(org-block ((t (:inherit fixed-pitch))))
+ '(org-code ((t (:inherit (shadow fixed-pitch)))))
+ '(org-document-info ((t (:foreground "dark orange"))))
+ '(org-document-info-keyword ((t (:inherit (shadow fixed-pitch)))))
+ '(org-indent ((t (:inherit (org-hide fixed-pitch)))))
+ '(org-link ((t (:foreground "royal blue" :underline t))))
+ '(org-meta-line ((t (:inherit (font-lock-comment-face fixed-pitch)))))
+ '(org-property-value ((t (:inherit fixed-pitch))) t)
+ '(org-special-keyword ((t (:inherit (font-lock-comment-face fixed-pitch)))))
+ '(org-table ((t (:inherit fixed-pitch :foreground "#83a598"))))
+ '(org-tag ((t (:inherit (shadow fixed-pitch) :weight bold :height 0.8))))
+ '(org-verbatim ((t (:inherit (shadow fixed-pitch))))))
