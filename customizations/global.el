@@ -30,6 +30,10 @@
 
 (require 'hideshow)
 (require 'hide-comnt)
+(require 'all-the-icons)
+;;(all-the-icons-install-fonts)
+
+
 
 (add-hook 'prog-mode-hook #'hs-minor-mode)
 (setq hs-hide-comments-when-hiding-all t)

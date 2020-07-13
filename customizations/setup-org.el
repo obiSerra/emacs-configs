@@ -134,7 +134,10 @@
 ;; Bike
 ;;Icons made by <a href= "http://www.freepik.com/" title= "Freepik">Freepik</a> from <a href= "https://www.flaticon.com/" title= "Flaticon"> www.flaticon.com</a>
 
+    ;;  ("work" (concat (file-name-directory (buffer-file-name)) "../icons/work-color.svg") nil nil :ascent center)
+
 (customize-set-value
     'org-agenda-category-icon-alist
     `(
-      ("work" (concat (file-name-directory (buffer-file-name)) "../icons/work-color.svg") nil nil :ascent center)))
+        ("work" (all-the-icons-faicon  "cogs") nil nil :ascent center)
+      ))
