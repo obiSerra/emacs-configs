@@ -30,13 +30,17 @@
 
 (require 'hideshow)
 (require 'hide-comnt)
+(require 'all-the-icons)
+;;(all-the-icons-install-fonts)
+
+
 
 (add-hook 'prog-mode-hook #'hs-minor-mode)
 (setq hs-hide-comments-when-hiding-all t)
 (setq hs-hide-initial-comment-block t)
 
 (defun copy-from-osx ()
-  "Mac osx Emacs interaction."
+  "Mac osx Emacs interaction." 
   (shell-command-to-string "pbpaste"))
 
 (defun paste-to-osx (text &optional push)
@@ -46,8 +50,10 @@
       (process-send-eof proc))))
 
 ;; Interactions between emacs kill-ring and mac osx clipboard
-(setq interprogram-cut-function 'paste-to-osx)
-(setq interprogram-paste-function 'copy-from-osx)
+(when (eq system-type "darwin")
+  (setq interprogram-cut-function 'paste-to-osx)
+  (setq interprogram-paste-function 'copy-from-osx))
+
 
 ;; Git gutter abled
 

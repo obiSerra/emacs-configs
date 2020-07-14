@@ -5,6 +5,16 @@
 ;; Define package repositories
 (require 'package)
 (package-initialize)
+
+;; Some combination of GNU TLS and Emacs fail to retrieve archive
+;; contents over https.
+;; https://www.reddit.com/r/emacs/comments/cdei4p/failed_to_download_gnu_archive_bad_request/etw48ux
+;; https://debbugs.gnu.org/cgi/bugreport.cgi?bug=34341
+
+(if (and (version< emacs-version "26.3") (>= libgnutls-version 30604))
+    (setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3"))
+
+
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.org/packages/") t)
 (add-to-list 'package-archives
@@ -90,6 +100,10 @@
     prettier-js
     dashboard
     rjsx-mode
+    helm-org-rifle
+    org-sticky-header
+    org-bullets
+    all-the-icons
     ))
 
 ;; On OS X, an Emacs instance started from the graphical user
@@ -187,6 +201,9 @@
  '(ede-project-directories (quote ("/Users/robertoserra/Dropbox/arduino-sketches")))
  '(markdown-command "/usr/local/bin/pandoc")
  '(markdown-preview-http-port 9001)
+ '(org-agenda-files
+   (quote
+    ("/mnt/c/Users/Quality Assurance/Dropbox/org-agenda/stuff.org" "/mnt/c/Users/Quality Assurance/Dropbox/org-agenda/keeplocals.org")))
  '(org-capture-templates
    (quote
     (("t" "Todo" entry
@@ -196,12 +213,25 @@
   %a"))) t)
  '(package-selected-packages
    (quote
-    (dash ruby-mode flycheck flow-minor-mode markdown-preview-mode websocket spiral yasnippet vue-mode vue-html-mode markdown-mode+ prettier-js scheme-complete scribble-mode geiser quack curl-for-url less sass-mode org-brain geeknote ipython column-marker json-mode handlebars-mode dockerfile-mode js-auto-beautify js2-mode feature-mode less-css-mode kibit-helper gherkin-mode fiplr yaml-mode arduino-mode flymake-jslint ## racket-mode ssh apache-mode php-mode atom-dark-theme spacemacs-theme darkokai-theme groovy-mode ox-twbs plantuml-mode request web-mode org-gcal php+-mode zenburn tagedit smex rainbow-delimiters projectile paredit newlisp-mode monokai-theme material-theme markdown-mode magit jenkins ido-ubiquitous highlight-symbol exec-path-from-shell cyberpunk-theme clojure-mode-extra-font-locking cider ac-emmet))))
+    (neotree doom-themes org-bullets helm-org-rifle org-sticky-header dash ruby-mode flycheck flow-minor-mode markdown-preview-mode websocket spiral yasnippet vue-mode vue-html-mode markdown-mode+ prettier-js scheme-complete scribble-mode geiser quack curl-for-url less sass-mode org-brain geeknote ipython column-marker json-mode handlebars-mode dockerfile-mode js-auto-beautify js2-mode feature-mode less-css-mode kibit-helper gherkin-mode fiplr yaml-mode arduino-mode flymake-jslint ## racket-mode ssh apache-mode php-mode atom-dark-theme spacemacs-theme darkokai-theme groovy-mode ox-twbs plantuml-mode request web-mode org-gcal php+-mode zenburn tagedit smex rainbow-delimiters projectile paredit newlisp-mode monokai-theme material-theme markdown-mode magit jenkins ido-ubiquitous highlight-symbol exec-path-from-shell cyberpunk-theme clojure-mode-extra-font-locking cider ac-emmet))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(fixed-pitch ((t (:family "Inconsolata" :slant normal :weight normal :height 1.0 :width normal))))
+ '(org-block ((t (:inherit fixed-pitch))))
+ '(org-code ((t (:inherit (shadow fixed-pitch)))))
+ '(org-document-info ((t (:foreground "dark orange"))))
+ '(org-document-info-keyword ((t (:inherit (shadow fixed-pitch)))))
+ '(org-indent ((t (:inherit (org-hide fixed-pitch)))))
+ '(org-link ((t (:foreground "royal blue" :underline t))))
+ '(org-meta-line ((t (:inherit (font-lock-comment-face fixed-pitch)))))
+ '(org-property-value ((t (:inherit fixed-pitch))) t)
+ '(org-special-keyword ((t (:inherit (font-lock-comment-face fixed-pitch)))))
+ '(org-table ((t (:inherit fixed-pitch :foreground "#83a598"))))
+ '(org-tag ((t (:inherit (shadow fixed-pitch) :weight bold :height 0.8))))
+ '(org-verbatim ((t (:inherit (shadow fixed-pitch)))))
+ '(variable-pitch ((t (:family "Source Sans Pro" :height 180 :weight light)))))
 (put 'erase-buffer 'disabled nil)
 (put 'upcase-region 'disabled nil)

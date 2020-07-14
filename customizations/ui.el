@@ -26,7 +26,20 @@
 ;; for a more technical explanation.
 ;(add-to-list 'custom-theme-load-path "~/.emacs.d/themes" )
 ;(add-to-list 'load-path "~/.emacs.d/themes")
-(load-theme 'spacemacs-dark t)
+;;(load-theme 'spacemacs-dark t)
+
+
+;;(load-theme 'doom-dracula t)
+;;(load-theme 'doom-dark+ t)
+(load-theme 'doom-molokai t)
+
+
+;;(add-to-list 'default-frame-alist '(foreground-color . "#CCCCC"))
+
+(require 'neotree)
+(doom-themes-neotree-config)
+
+(doom-themes-org-config)
 
 ;; increase font size for better readability
 (set-face-attribute 'default nil :height 120)
