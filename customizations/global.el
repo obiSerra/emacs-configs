@@ -55,6 +55,9 @@
 
 (yas-global-mode 1)
 
+(require 'neotree)
+(global-set-key [f8] 'neotree-toggle)
+
 (provide 'global)
 
 ;;; global.el ends here
