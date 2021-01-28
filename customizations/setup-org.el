@@ -18,12 +18,7 @@
 (require 'ob-js)
 (require 'ob-lisp)
 (require 'ob-org)
-(org-babel-do-load-languages
- 'org-babel-load-languages
- '((python . t)
-   (clojure . t)
-   (js . t)
-   (emacs-lisp . t)))
+
 
 
 ; Calendar syncronization
@@ -141,3 +136,23 @@
     `(
         ("work" (all-the-icons-faicon  "cogs") nil nil :ascent center)
       ))
+
+
+;; Org-babel setup
+(require 'org-tempo)
+
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((emacs-lisp . t)
+   (python . t)))
+
+(setq org-confirm-babel-evaluate nil)
+
+(add-to-list 'org-structure-template-alist '("py" . "src python"))
+(add-to-list 'org-structure-template-alist '("el" . "src emacs-lisp"))
+(add-to-list 'org-structure-template-alist '("cj" . "src clojure"))
+
+
+
+(provide 'setup-org)
+;;; setup-org.el ends here

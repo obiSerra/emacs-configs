@@ -22,7 +22,7 @@
 (add-to-list 'package-archives
              '("marmalade" . "http://marmalade-repo.org/packages/") t)
 (add-to-list 'package-archives
-             '("tromey" . "http://tromey.com/elpa/") t)
+             '("tromey" . "htp://tromey.com/elpa/") t)
 
 
 ;; (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
@@ -30,7 +30,7 @@
 ;;                          ("melpa" . "http://melpa-stable.milkbox.net/packages/")))
 
 (setq debug-on-error t)
-;; Fix for the warnings
+ ;; Fix for the warnings
 
 (defvar ido-cur-item nil)
 (defvar ido-default-item nil)
@@ -213,7 +213,7 @@
   %?
   %a")) t)
  '(package-selected-packages
-   '(neotree doom-themes org-bullets helm-org-rifle org-sticky-header dash ruby-mode flycheck flow-minor-mode markdown-preview-mode websocket spiral yasnippet vue-mode vue-html-mode markdown-mode+ prettier-js scheme-complete scribble-mode geiser quack curl-for-url less sass-mode org-brain geeknote ipython column-marker json-mode handlebars-mode dockerfile-mode js-auto-beautify js2-mode feature-mode less-css-mode kibit-helper gherkin-mode fiplr yaml-mode arduino-mode flymake-jslint ## racket-mode ssh apache-mode php-mode atom-dark-theme spacemacs-theme darkokai-theme groovy-mode ox-twbs plantuml-mode request web-mode org-gcal php+-mode zenburn tagedit smex rainbow-delimiters projectile paredit newlisp-mode monokai-theme material-theme markdown-mode magit jenkins ido-ubiquitous highlight-symbol exec-path-from-shell cyberpunk-theme clojure-mode-extra-font-locking cider ac-emmet)))
+   '(alert neotree doom-themes org-bullets helm-org-rifle org-sticky-header dash ruby-mode flycheck flow-minor-mode markdown-preview-mode websocket spiral yasnippet vue-mode vue-html-mode markdown-mode+ prettier-js scheme-complete scribble-mode geiser quack curl-for-url less sass-mode org-brain geeknote ipython column-marker json-mode handlebars-mode dockerfile-mode js-auto-beautify js2-mode feature-mode less-css-mode kibit-helper gherkin-mode fiplr yaml-mode arduino-mode flymake-jslint ## racket-mode ssh apache-mode php-mode atom-dark-theme spacemacs-theme darkokai-theme groovy-mode ox-twbs plantuml-mode request web-mode org-gcal php+-mode zenburn tagedit smex rainbow-delimiters projectile paredit newlisp-mode monokai-theme material-theme markdown-mode magit jenkins ido-ubiquitous highlight-symbol exec-path-from-shell cyberpunk-theme clojure-mode-extra-font-locking cider ac-emmet)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
