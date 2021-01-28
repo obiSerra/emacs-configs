@@ -21,3 +21,4 @@ icons/*
 fonts/*
 transient/*
 bookmarks
+init.el
