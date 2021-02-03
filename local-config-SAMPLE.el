@@ -1,6 +1,3 @@
 ;; Template for local-config.el
-
-(setq org-agenda-path "")
-
-
-(setq org-agenda-task-file "")
+(setq obi/org-agenda-path "")
+(setq obi/org-working-file (concat obi/org-agenda-path "..."))
