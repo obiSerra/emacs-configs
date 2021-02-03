@@ -17,6 +17,7 @@ tramp
 \#*
 
 customizations/private.el
+local-config.el
 icons/*
 fonts/*
 transient/*
